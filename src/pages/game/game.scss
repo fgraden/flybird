@@ -1,0 +1,90 @@
+.gamePage {
+  $color: #f4f4f4;
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+    .header {
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        background: rgba(66,66,66, 0.3);
+
+        .navStatus {
+            position: absolute;
+            left: 20px;
+        }
+        
+        .rightMenu {
+            float: right;
+            height: 100%;
+            margin-right: 10px;
+        }
+    }
+
+    #flybird_wrap {
+	    background-color: RGBA(22, 66, 99, 0.5);
+	    width: 100%;
+	    height: 100%;
+    }
+
+    .popWindow {
+        position: absolute;
+        transform: translateX(-50%) translateY(-50%);
+        top: 50%;
+        left: 50%;
+
+        .confirm {
+            min-width: 65%;
+            padding: 5px;
+            background: #15121b;
+            color: white;
+        }
+
+        .timePanel {
+            width: 80px;
+            height: 60px;
+            background: rgba(193, 107, 163, 0.3);
+            color: red;
+            border: 2px solid red;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 22px;
+        }
+        
+        .rematch {
+            min-width: 60vw;
+            min-height: 120px;
+            background: red;
+            border-radius: 5px;
+            padding: 10px;
+            background: #15121b;
+            color: $color;
+
+            .content {
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+        }
+
+        .buttonWrap {
+            position: absolute;
+            bottom: 20px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            width: 120px;
+
+            button {
+                padding: 5px;
+                border-radius: 3px;
+                background: rgba(66, 127, 235, 0.51);
+                color: $color;
+                margin-left: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<div class="menuPopup">
+    <div class="menuButton" (click)="menuPopup()">{{buttonName}}</div>
+	<div *ngIf="showMenu" class="menuList">
+		<li *ngFor="let menu of menus" (touchend)="menuSelect(menu.id)">
+			{{menu.label}}
+		</li>
+	</div>
+</div>

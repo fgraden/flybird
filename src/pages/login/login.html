@@ -1,0 +1,19 @@
+<div class="login_root">
+	<div class="form_wrap">
+	    <div>
+	    	<button class="button floatRight" type="button" id="toggleLabel" (click)="toggleLabel();loginForm.reset();">{{toggleButtonName}}</button>
+	    </div>
+	    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+	    	<div>
+	    	    <label for="name">{{nameTipLable}}</label>
+	            <input id="name" type="text" [(ngModel)]="loginName" name="name" #name="ngModel"
+	            required 
+	            minlength="4" 
+	            autocomplete="off" />
+	            <div *ngIf="name.invalid && name.dirty" class="error">请输入长度大于4的名称。</div>
+	            <div *ngIf="showErrorMsg" class="error">{{errorMsg}}</div>
+	        </div>
+	        <button class="button marginTop8">确定</button>
+	    </form>
+   </div>
+</div>

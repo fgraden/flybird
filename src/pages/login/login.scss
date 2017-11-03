@@ -1,0 +1,45 @@
+.login_root {
+    $color: #f4f4f4;
+    $errorColor: #cc5a65;
+    width: 100%;
+    height: 100%;
+    background: rgb(137, 152, 132);;
+    position: relative;
+	.form_wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 10px;
+        margin: 8px;
+        background: #15121b;
+        border-radius: 5px;
+        min-width: 80%;
+	}
+	.floatRight {
+	    float: right
+	}
+	.button {
+        padding: 5px;
+        border-radius: 3px;
+        background: rgba(66, 127, 235, 0.51);
+        color: $color;
+	}
+	.error{
+	    color: $errorColor;
+	}
+	label {
+	    display: block;
+	    color: #4e88a5;
+	}
+	.marginTop8,input {
+	    margin-top: 8px;
+	}
+	input {
+	    border: 1px solid #e3e3e3;
+        border-radius: 3px;
+	}
+	.ng-invalid:not(.ng-pristine) {
+	    border-color: $errorColor;
+	}
+}

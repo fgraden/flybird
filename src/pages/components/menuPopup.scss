@@ -1,0 +1,36 @@
+
+.menuPopup {
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+
+    .menuButton {
+        font-size: 1.4rem;
+        background: rgba(255, 255, 255, 0.5);
+        display: block;
+        line-height: 1.4rem;
+        color: rgba(20, 60, 36, 0.69);
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .menuList {
+        position: absolute;
+        top: calc(50% + 0.7rem + 6px);
+        display:inline-block;
+        padding: 3px 7px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(122, 122, 122, 0.8);
+        border-radius: 3px;
+
+        li:not(:first-child) {
+            border-top: 1px solid rgba(122, 122, 122, 0.8);
+        }
+
+        li {
+            padding: 5px 0;
+            list-style-type: none;
+        }
+    }
+}

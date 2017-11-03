@@ -1,0 +1,16 @@
+
+.statusBar {
+	display: inline-block;
+	height: 40px;
+
+    >div {
+        font-size: 1.4rem;
+        background: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        line-height: 1.4rem;
+        color: rgba(20, 60, 36, 0.69);
+        border-radius: 100%;
+        margin: 7px 3px;
+        padding: 5px;
+    }
+}

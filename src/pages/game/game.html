@@ -1,0 +1,32 @@
+
+<div class="gamePage">
+	<div class="header">
+		<div class='navStatus'>
+			<user-status-bar [count]="count"></user-status-bar>
+		</div>
+		<div class="rightMenu">
+			<popup-menu-bar [menus]="menus" buttonName="点点看" (mclick)="menuSelect($event)"></popup-menu-bar>
+		</div>
+	</div>
+
+    <div id="flybird_wrap">
+        <canvas id="flybird" width="100%" height="100%"></canvas>
+    </div>
+
+    <div class="popWindow" *ngIf="showPop">
+        <div *ngIf="!showAnimate" class="rematch">
+            <div class="content">
+                <span>再玩一局？</span>
+            </div>
+            <div class="buttonWrap">
+                <button (click)="reGame()">确定</button>
+                <button (click)="hidePop()">取消</button>
+            </div>
+        </div>
+        <div *ngIf="showAnimate">
+            <div class="timePanel"
+                [@timingAnimate]="animateSate"
+                (@timingAnimate.done)="animateDone()">{{animateLast}}</div>
+        </div>
+    </div>
+</div>

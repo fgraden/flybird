@@ -1,0 +1,18 @@
+
+<div class="rankPage">
+  <div class="header">
+    <div class='title'>
+      <span>排名</span>
+    </div>
+    <div class="rightMenu">
+      <popup-menu-bar [menus]="menus" buttonName="点点看" (mclick)="menuSelect($event)"></popup-menu-bar>
+    </div>
+  </div>
+    <div class="content">
+      <div *ngFor="let user of users" class="line">
+        <div class="col1">{{user.rank}}</div>
+        <div class="col2">{{user.name}}</div>
+        <div class="col3">{{user.count}}</div>
+      </div>
+    </div>
+</div>
