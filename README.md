@@ -1,26 +1,32 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+这个是使用ionic框架编写的android端小游戏
 
-## How to use this template
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## 目录介绍
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+-src目录下是项目的代码实现
+-    app是项目的入口
+-    lib目录是js代码，实现的canvas上的动画逻辑
+-    pages下面是程序的几个界面
+-        tabs主要是界面的分发逻辑
+-        components包含了通用的组件
+-        game是程序的主界面
+-        login是登陆界面，主要是给玩家起个名字
+-        rank可以看到当前的玩家排名
+-        setting设置页面（设置难度、道具等），功能没有实现
+-    services主要是维护当前用户信息和用户信息持久化
 
-### With the Ionic CLI:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
+### 如何运行
+-可以参考http://www.jianshu.com/p/1baf40713c1c
 
-Then, to run it, cd into `myTabs` and run:
+-安卓环境
+-$ ionic platform add android
+-$ ionic cordova build android
+-$ ionic cordova emulate android 或 $ ionic cordova run android
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
+-或者在本机浏览器运行，可以使用chrome进行模拟调试
+-ionic serve
 
-Substitute ios for android if not on a Mac.
+
 
