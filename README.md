@@ -17,15 +17,15 @@
 
 
 ### 如何运行
-		可以参考http://www.jianshu.com/p/1baf40713c1c
+    可以参考http://www.jianshu.com/p/1baf40713c1c
 
-		安卓环境
-		$ ionic platform add android
-		$ ionic cordova build android
-		$ ionic cordova emulate android 或 $ ionic cordova run android
+    安卓环境
+      $ ionic platform add android
+      $ ionic cordova build android
+      $ ionic cordova emulate android 或 $ ionic cordova run android
 
-		或者在本机浏览器运行，可以使用chrome进行模拟调试
-		ionic serve
+      或者在本机浏览器运行，可以使用chrome进行模拟调试
+      ionic serve
  
 
 
