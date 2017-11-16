@@ -1,5 +1,5 @@
 
-import {Component, Output} from "@angular/core";
+import {Component, Output, EventEmitter} from "@angular/core";
 import { UsersService } from '../../services/usersService';
 import { ChildComponent } from '../pageInterfaces';
 
@@ -8,7 +8,7 @@ import { ChildComponent } from '../pageInterfaces';
 	templateUrl: './login.html'
 })
 export class LoginPage implements ChildComponent {
-    @Output() toPage: any;
+    @Output() toPage = new EventEmitter<string>(); //@Output() toPage: any;
 	toggleButtonName = "注册";
 	isRegist = false;
 	submitted = false;
@@ -48,7 +48,7 @@ export class LoginPage implements ChildComponent {
             }
         }
         this.users.currentUser = this.loginName;
-        this.toPage('game');
+        this.toPage.emit('game');  //this.toPage('game');
     }
 
 }

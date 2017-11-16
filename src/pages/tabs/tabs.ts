@@ -1,4 +1,4 @@
-import { Component, ViewChild, ComponentFactoryResolver} from '@angular/core';
+import { Component, ViewChild, ComponentFactoryResolver, EventEmitter} from '@angular/core';
 
 import { RankPage } from '../rank/rank';
 import { GamePage } from '../game/game';
@@ -38,6 +38,6 @@ export class TabsPage {
 
         let componentRef = viewContainerRef.createComponent(componentFactory); 
         this.currentPageKey = pageKey;
-        (<ChildComponent>componentRef.instance).toPage = (pageKey) => this.selectPage(pageKey);
+        (<ChildComponent>componentRef.instance).toPage.subscribe((pageKey) => this.selectPage(pageKey));
     }
 }

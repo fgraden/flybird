@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler, enableProdMode } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { FormsModule } from "@angular/forms";
@@ -19,7 +19,7 @@ import { UsersService, FrontDb } from '../services/usersService';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-enableProdMode();
+//enableProdMode();
 
 @NgModule({
   declarations: [

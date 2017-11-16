@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {Flybird} from '../../lib/flybird';
 import { ChildComponent } from '../pageInterfaces';
@@ -26,7 +26,7 @@ import {trigger, state, style, animate, transition, keyframes} from '@angular/an
       ]
 })
 export class GamePage implements ChildComponent{
-  @Output() toPage: any;
+  @Output() toPage = new EventEmitter<string>();
   flybird: Flybird;
   showPop = false;
   showAnimate = false;
@@ -87,7 +87,7 @@ export class GamePage implements ChildComponent{
           this.reGame();
           return;
       }
-      this.toPage(pageKey);
+      this.toPage.emit(pageKey);
   }
 
   reGame() {

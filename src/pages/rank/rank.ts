@@ -1,4 +1,4 @@
-import { Component, Output } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { UsersService } from '../../services/usersService';
 import { ChildComponent } from '../pageInterfaces';
 
@@ -7,7 +7,7 @@ import { ChildComponent } from '../pageInterfaces';
     templateUrl: 'rank.html'
 })
 export class RankPage implements ChildComponent{
-    @Output() toPage: any;
+    @Output() toPage = new EventEmitter<string>(); //@Output() toPage: any;
     users: any;
 
     menus = [{
@@ -25,6 +25,6 @@ export class RankPage implements ChildComponent{
     }
 
     menuSelect(pageKey: string) {
-        this.toPage(pageKey);
+        this.toPage.emit(pageKey);  //this.toPage(pageKey);
     }
 }
